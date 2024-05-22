@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Holiday Planner</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link id="planefavicon" rel="icon" href="images/plane-image.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" placeholder="Enter your message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-default"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault(); 
+
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+
+                console.log('Message from:', name);
+                console.log('Email:', email);
+                console.log('Message:', message);
+
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

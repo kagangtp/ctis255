@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Planner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="libraries/jquery-3.7.1.min.js"></script>
+    <link id="planefavicon" rel="icon" href="images/plane-image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav class="main-nav">
+                <ul>
+                    <li class="fas fa-paper-plane">Holiday Planner</li>
+                    <li><a href="#" id="search">Search</a></li>
+                    <li><a href="#" id="register">Sign Up</a></li>
+                    <li><a href="#" id="Login">Login</a></li>
+                    <li id="userInfo"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <form id="register-form" style="border:1px solid #ccc" class="hidden">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="registerName" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="registerPassword" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" id="registerPw2" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+
+    <form id="login-form" class="hidden">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="loginUser" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="loginPassword" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+        </div>
+
+
+    </form>
+
+
+    <main>
+
+        <div class="hidden" id="userTodo">
+            <h2>To-Do List</h2>
+
+            <ul>
+
+            </ul>
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Which one do you want to delete (starts from 1)">
+                <button id="remove-button">Remove</button>
+            </form>
+        </div>
+
+        <div class="hidden" id="searchClick">
+
+            <input type="text" id="search-box" placeholder="Search projects...">
+            <button id="search-button">Search</button>
+            <button id="reset-button">Reset</button>
+        </div>
+
+
+        <h1 class="banner">Plan your holidays</h1>
+
+        <div class="flags-container">
+            <div class="flag" data-country="Brazil">
+                <img src="images/brazil-flag.png" alt="Brazil Flag">
+                <div class="todo-list" id="brazil-todo">
+                    <h2>Brazil To-Do List</h2>
+                    <ul>
+                        <li>Football Match</li>
+                        <li>Beach Volleyball</li>
+                        <li>Samba Dance</li>
+                        <li>Amazon Rainforest Tour</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flag" data-country="Argentina">
+                <img src="images/argentina-flag.png" alt="Argentina Flag">
+                <div class="todo-list" id="argentina-todo">
+                    <h2>Argentina To-Do List</h2>
+                    <ul>
+                        <li>Tango Show</li>
+                        <li>Patagonia Hike</li>
+                        <li>Wine Tasting</li>
+                        <li>Iguazu Falls Visit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flag" data-country="Chile">
+                <img src="images/chile-flag.png" alt="Chile Flag">
+                <div class="todo-list" id="chile-todo">
+                    <h2>Chile To-Do List</h2>
+                    <ul>
+                        <li>Atacama Desert</li>
+                        <li>Patagonia Trek</li>
+                        <li>Wine Tasting</li>
+                        <li>Skiing in Andes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flag" data-country="Colombia">
+                <img src="images/colombia-flag.png" alt="Colombia Flag">
+                <div class="todo-list" id="colombia-todo">
+                    <h2>Colombia To-Do List</h2>
+                    <ul>
+                        <li>Coffee Tour</li>
+                        <li>Cartagena City Tour</li>
+                        <li>Amazon Rainforest</li>
+                        <li>Salsa Dancing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flag" data-country="Peru">
+                <img src="images/peru-flag.png" alt="Peru Flag">
+                <div class="todo-list" id="peru-todo">
+                    <h2>Peru To-Do List</h2>
+                    <ul>
+                        <li>Machu Picchu</li>
+                        <li>Lake Titicaca</li>
+                        <li>Inca Trail</li>
+                        <li>Lima City Tour</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flag" data-country="Uruguay">
+                <img src="images/uruguay-flag.png" alt="Uruguay Flag">
+                <div class="todo-list" id="uruguay-todo">
+                    <h2>Uruguay To-Do List</h2>
+                    <ul>
+                        <li>Beach Day</li>
+                        <li>Montevideo City Tour</li>
+                        <li>Colonia del Sacramento</li>
+                        <li>Wine Tour</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Holiday Planner | <a href="contact.html" target="_blank">Contact Us</a></p>
+    </footer>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

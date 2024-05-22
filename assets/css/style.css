@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+      background-image: url('../../images/background.jpg');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+    
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#userTodo h2{
+  color:#f1f1f1;
+  margin-left: 45%;
+}
+
+#userTodo ul{
+  color: #333;
+  margin-left: 45%;
+}
+
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    margin-top: 80px; 
+    text-align: center;
+    color: #f1f1f1;
+    padding: 20px;
+}
+
+.flags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flag {
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.flag img {
+    width: 400px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.flag:hover::after {
+    content: attr(data-country);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.todo-list {
+    display: none; /* Başlangıçta gizli */
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    padding: 5px 0;
+}
+
+.todo-list input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.todo-list button {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#form-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    width: 300px;
+}
+
+.d-none {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+* {box-sizing: border-box}
+
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.container {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+form {
+  color: #f1f1f1;
+    border: 3px solid #f1f1f1;
+  }
+ 
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+
+  .container {
+    padding: 16px;
+  }
+ 
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+   
+  }
+
+  .hidden {
+    display: none;
+}
